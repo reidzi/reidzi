@@ -43,7 +43,9 @@ $dir->close();
       { 
       echo('
 <script type="text/javascript">
-
+  $(\'body\').on(\'shown.bs.modal\', \'#'.$names[$i].'\', function (e) {
+    var video = document.getElementById("id'.$names[$i].'");  
+    video.pause();
   });
   $(\'body\').on(\'hidden.bs.modal\', \'#'.$names[$i].'\', function (e) {
     var video = document.getElementById("id'.$names[$i].'");  
